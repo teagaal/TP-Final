@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  background-color: mediumseagreen;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+}
