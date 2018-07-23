@@ -20,7 +20,6 @@ self.sendDesc = function (id) {
 }
 
 self.getCategories = function (id) {
-  console.log(id);
   const itemCat = new Promise(function (resolve, reject) {
     rest.get('https://api.mercadolibre.com/categories/' + id).on('complete', function (result) {
       resolve(result)

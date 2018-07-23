@@ -21,25 +21,17 @@ self.Search = function (req, res) {
       let filterArray = [];
       data.available_filters[0].values.map((filterResults) => {
         filterArray.push(filterResults)
-        console.log(1);
       })
       let bestResult = filterArray[0]
-      console.log(2);
 
       for (var i = 0; i < filterArray.length; i++) {
         if (bestResult.results <= filterArray[i].results) {
-          console.log(3);
           bestResult = filterArray[i]
-          console.log(bestResult);
         }
       }
-      console.log(4);
       self.categories.push(bestResult.name);
       return self.categories
     }
-    console.log(5);
-
-
 
     const items = searchService.getObject(data.results)
 

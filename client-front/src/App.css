@@ -4,6 +4,7 @@ html {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  background-color: pink;
 }
 
 *, *:before, *:after {
@@ -19,6 +20,72 @@ html {
   height: 50px;
 }
 
+.product-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
 .item {
-  
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: white;
+  width: 70%;
+  height: 55%;
+  border-bottom: 1px solid grey;
+}
+
+.item-desc {
+  margin-left: 2rem;
+}
+
+.breadcrumb-container {
+  text-align: center;
+  margin: 0.5rem;
+  font-size: 13px;
+  position: relative;
+  right: 25.9em;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+.product-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.sold {
+  margin-left: 1rem;
+}
+
+.desc {
+  width: 700px;
+  font-size: 14px;
+}
+
+.desc-title {
+  position: relative;
+  right: 305px;
+  margin-top: 5rem;
+}
+
+img {
+  height: 100%;
 }

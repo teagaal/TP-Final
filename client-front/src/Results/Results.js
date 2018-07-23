@@ -30,20 +30,23 @@ class Results extends Component {
         {this.state.data &&
           <Breadcrumb categories={this.state.data.categories} />}
 
-        {this.state.data &&
-          this.state.data.items.map((product, i) => {
-            const productUrl = '/items/' + product.id
-            return (
-              <Link to={productUrl} key={i}>
-                <List
-                  picture={product.picture}
-                  price={product.price.amount}
-                  title={product.title}
-                />
-              </Link>
-            )
-          })
-        }
+        <section className="product-results">
+          {this.state.data &&
+            this.state.data.items.map((product, i) => {
+              const productUrl = '/items/' + product.id
+              return (
+                <Link to={productUrl} key={i}>
+                  <List
+                    picture={product.picture}
+                    price={product.price.amount}
+                    decimals={product.price.decimals}
+                    title={product.title}
+                  />
+                </Link>
+              )
+            })
+          }
+        </section>
       </section>
     )
   }

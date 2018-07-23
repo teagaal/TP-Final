@@ -28,12 +28,20 @@ class Product extends Component {
             <Breadcrumb categories={this.state.data.categories} />
 
             <section className="product">
-              <img src={this.state.data.picture} />
-              <span className="condition">{this.state.data.condition}</span>
-              <span className="sold">{this.state.data.sold_quantity} vendidos</span>
-              <p className="title">{this.state.data.title}</p>
-              <span className="price">{this.state.data.price.amount}</span>
-              <p className="desc">{this.state.data.description}</p>
+              <div className="product-container">
+                <div className="product-main">
+                  <img src={this.state.data.picture} />
+                  <div className="product-data">
+                    <span className="condition">{this.state.data.condition}</span>
+                    <span className="sold">{this.state.data.sold_quantity} vendidos</span>
+                    <p className="title">{this.state.data.title}</p>
+                    <p className="price">${this.state.data.price.amount}</p>
+                    <button type="button">Comprar</button>
+                  </div>
+                </div>
+                <p className="desc-title">Descripción</p>
+                <p className="desc">{this.state.data.description}</p>
+              </div>
             </section>
           </React.Fragment>
         }

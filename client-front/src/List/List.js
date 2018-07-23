@@ -7,10 +7,8 @@ class List extends Component {
         <div className="item-image">
           <img src={this.props.picture} />
         </div>
-        <div className="item-price">
-          <span className="price">{this.props.price}</span>
-        </div>
-        <div className="item-title">
+        <div className="item-desc">
+          <p className="price">${this.props.price}</p>
           <p className="title">{this.props.title}</p>
         </div>
       </article>
