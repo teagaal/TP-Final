@@ -24,6 +24,7 @@ class Product {
   }
 
   passItem() {
+
     return {
       id: this.id,
       title: this.title,
