@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import List from '../List/List'
 import Search from '../Search/Search'
 import Breadcrumb from '../Breadcrumb/Breadcrumb'
@@ -24,8 +24,9 @@ class Results extends Component {
 
   render() {
     return (
-
       <section className="main">
+        <Search />
+
         {this.state.data &&
           <Breadcrumb categories={this.state.data.categories} />}
 
@@ -40,7 +41,6 @@ class Results extends Component {
                   title={product.title}
                 />
               </Link>
-
             )
           })
         }

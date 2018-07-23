@@ -18,7 +18,7 @@ class Product {
       title: this.title,
       price: this.formatPrice(this.price),
       picture: this.thumbnail,
-      condition: this.condition,
+      condition: this.formatCondition(this.condition),
       free_shipping: this.shipping
     }
   }
@@ -29,7 +29,7 @@ class Product {
       title: this.title,
       price: this.formatPrice(this.price),
       picture: this.thumbnail,
-      condition: this.condition,
+      condition: this.formatCondition(this.condition),
       free_shipping: this.shipping,
       sold_quantity: this.sold_quantity,
       description: this.description,
@@ -44,6 +44,14 @@ class Product {
       currency: this.currency_id,
       amount: parseInt(splitPrice[0]),
       decimals: parseInt(splitPrice[1])
+    }
+  }
+
+  formatCondition(condition) {
+    if (condition === "new") {
+      return this.condition = "Nuevo"
+    } else {
+      return this.condition = "Usado"
     }
   }
 }

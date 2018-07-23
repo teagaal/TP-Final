@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class List extends Component {
   render() {
     return (
-      <div className="item">
+      <article className="item">
         <div className="item-image">
           <img src={this.props.picture} />
         </div>
@@ -13,7 +13,7 @@ class List extends Component {
         <div className="item-title">
           <p className="title">{this.props.title}</p>
         </div>
-      </div>
+      </article>
     )
   }
 }

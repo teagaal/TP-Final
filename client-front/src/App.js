@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Search from './Search/Search';
 import Results from './Results/Results';
 import Product from './Product/Product';
-import Breadcrumb from './Breadcrumb/Breadcrumb';
 import './App.css';
 
 class App extends Component {
